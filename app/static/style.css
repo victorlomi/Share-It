@@ -110,6 +110,26 @@ nav .links a {
     font-size: 18px;
 }
 
+.post {
+    border: 1px solid #d5d5d5;
+    grid-column: 2 / span 5;
+    border-radius: 9px;
+    padding-left: 20px;
+}
+
+.post h1 {
+    color: #222;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.post h2 {
+    font-size: 17px;
+    color: #4A4A4A;
+    font-weight: 400;
+}
+
 form {
     margin-top: 185px;
 }
