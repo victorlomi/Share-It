@@ -5,7 +5,7 @@ A web app that allows users to join a community of people who blog about everyth
 
 **Author: Victor Lominyo**
 
-**Live Link: https://to-be-added.herokuapp.com/**
+**Live Link: https://share-it-flask.herokuapp.com/**
 
 
 Technologies Used
@@ -50,11 +50,7 @@ $ export FLASK_ENV=development
 $ flask run
 ```
 
-
-
 You are all set!
-
-
 
 Contact
 =
