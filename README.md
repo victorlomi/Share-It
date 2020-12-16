@@ -1,97 +1,53 @@
-# Pitch
+# Share It
 
-A web app that keeps you updated on the latest pitches from a variety of community contributed pitches. These pitches are divided into categories such as pick up lines and interview pitches. Users can comment and also add their own pitches.
-
+A web app that allows users to join a community of people who blog about everything and anything. Users can read individual blog posts and comment on them. Along with this, they are shown inspiration quotes on the website to inspire them.
 
 
 **Author: Victor Lominyo**
 
-
-
-**Live Link: https://one-pitch-flask.herokuapp.com/**
-
-
-
+**Live Link: https://to-be-added.herokuapp.com/**
 
 
 Technologies Used
-
 =
 
 - Python 
-
 - Flask
 
-
-
-
-
 Setup Intructions and Installation
-
 =
 
 1. Clone the repository on to your computer
-
-
-
 ```
-
-$ git clone https://github.com/victorlomi/pitch
-
+$ git clone https://github.com/victorlomi/Share-It
 ```
 
 
 
 2. Navigate to the project directory 
 
-
-
 ```
-
-$ cd pitch
-
+$ cd Share-It
 ```
-
-
 
 3. Create virtual environment and activate it
 
-
-
 ```
-
 $ python3 -m venv venv
-
 $ . venv/bin/activate
-
 ``` 
 
-
-
 4. Install packages
-
-
-
 ```
-
 $ pip install -r requirements.txt
-
 ```
-
-
 
 5. set environment variables and run
 
-
-
 ```
-
-$ export FLASK_APP=pitch.py
-
+$ export FLASK_APP=share_it.py
 $ export FLASK_ENV=development
-
 $ flask run
-
 ```
 
 
