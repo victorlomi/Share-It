@@ -1,5 +1,6 @@
 from flask import render_template, redirect, url_for, flash
 from flask_login import current_user, login_user, logout_user
+from sqlalchemy import desc
 from app.main import bp
 from app import db
 import requests
@@ -13,7 +14,7 @@ def index():
     response = requests.get(url).json()
 
     # get all the posts for displaying
-    posts = Post.query.all()
+    posts = Post.query.order_by(desc(Post.timestamp)).all()
     return render_template('index.html', posts=posts, User=User, quote=response)
 
 @bp.route('/post/<post_id>', methods=['GET', 'POST'])

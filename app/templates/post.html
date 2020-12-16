@@ -2,8 +2,8 @@
 
 {% block content %}
     <div class="post-grid">
-        <h1 class="post-title">{{ post.title }}</h1>
-        <h2 class="post-author">{{ post.author.username }}</h2>
+        <h1 class="post-title">{{ post.title.title() }}</h1>
+        <h2 class="post-author">By: {{ post.author.username.title() }}</h2>
         <p class="post-body">{{ post.body }}</p>
     </div>
 {% endblock %}

@@ -27,6 +27,7 @@
                 <div class="post">
                     <h1>{{ post.title }}</h1>
                     <h2>Author: {{ User.query.get(post.user_id).username }}</h2>
+                    <h2>Date Posted: {{ post.timestamp.date().day }}/{{ post.timestamp.date().month}}/{{ post.timestamp.date().year}}</h2>
                     <a href="{{ url_for('main.post', post_id=post.id) }}">Read More...</a>
                 </div>
             {% endfor %}
