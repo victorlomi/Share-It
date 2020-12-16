@@ -10,6 +10,11 @@ def index():
     posts = Post.query.all()
     return render_template('index.html', posts=posts, User=User)
 
+@bp.route('/post/<post_id>', methods=['GET', 'POST'])
+def post(post_id):
+    post = Post.query.get(post_id)
+    return render_template('post.html', post=post)
+
 @bp.route('/add-post', methods=['GET', 'POST'])
 def add_post():
     # go to login in page if user is not logged in
@@ -36,11 +41,10 @@ def user(user):
     pitches = Pitch.query.filter_by(author=user).all()
     return render_template('user.html', user=user, pitches=pitches)
 
-@bp.route('/comments/<pitch>')
-def comments(pitch):
-    comments = Comment.query.filter_by(pitch=Pitch.query.get(pitch)).all()
-
-    return render_template('comments.html', pitch=Pitch.query.get(pitch), comments=comments)
+@bp.route('/comments/<post>')
+def comments(post):
+    #comments = Comment.query.filter_by(pitch=Pitch.query.get(pitch)).all()
+    return render_template('comments.html')
 
 @bp.route('/add-comment/<pitch>', methods=['GET', 'POST'])
 def add_comment(pitch):

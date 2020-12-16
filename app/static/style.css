@@ -115,6 +115,7 @@ nav .links a {
     grid-column: 2 / span 5;
     border-radius: 9px;
     padding-left: 20px;
+    padding-bottom: 14px;
 }
 
 .post h1 {
@@ -128,6 +129,12 @@ nav .links a {
     font-size: 17px;
     color: #4A4A4A;
     font-weight: 400;
+}
+
+.post a {
+    color: #222;
+    font-weight: 700;
+    text-decoration: underline;
 }
 
 .add-form {
@@ -299,4 +306,29 @@ nav .links a {
     margin-top: 36px;
     font-size: 18px;
     font-family: 'Viga', sans-serif;
+}
+
+.post-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;:
+}
+
+.post-title {
+    font-size: 51px;
+    color: #222;
+}
+
+.post-author {
+    font-size: 21px;
+    margin: 0;
+    font-weight: 400;
+    color: #474747;
+}
+
+.post-body {
+    width: 65ch;
+    line-height: 1.6;
+    font-size: 26px;
+    color: #222;
 }
