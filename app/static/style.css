@@ -78,8 +78,23 @@ nav .links a {
 
 }
 
-.posts .section-title {
+.posts .hero {
     grid-column: 2 / span 11;
+}
+
+.posts .hero .add-button {
+    display: inline-block;
+    align-self: center;
+    text-decoration: none;
+    background-color: #222;
+    color: #FFF;
+    padding: 10px;
+    text-align: center;
+    border-radius: 7px;
+    margin-top: 33px;
+}
+
+.posts .hero h1 {
     color: #222;
     font-size: 30px;
     margin-top: 50px;
