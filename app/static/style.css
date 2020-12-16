@@ -110,16 +110,15 @@ nav .links a {
     font-size: 18px;
 }
 
-.call-to-action {
-    display: inline-block;
-    text-decoration: none;
-    border: none;
-    background-color: #222;
-    border-radius: 10px;
-    font-size: 16px;
-    padding: 11px 20px;
-    color: white;
-    margin-top: 50px;
+form {
+    margin-top: 185px;
+}
+
+form textarea {
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: 1px solid #d5d5d5;
+    color: #454545;
 }
 
 .hero-img {

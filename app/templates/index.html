@@ -12,7 +12,7 @@
     <div class="posts">
         <div class="hero">
             <h1>Posts</h1>
-            <a class="add-button" href="#">Add Post</a>
+            <a class="add-button" href="{{ url_for("main.add_post") }}">Add Post</a>
         </div>
         {% if posts %}
             {% for post in posts %}

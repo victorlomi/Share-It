@@ -10,17 +10,8 @@ def index():
     posts = Post.query.all()
     return render_template('index.html', posts=posts, User=User)
 
-@bp.route('/category/<category>')
-def category(category):
-    # retrieve all pitches in category
-    pitches = Pitch().query.filter_by(category=category).all()
-
-    if pitches:
-        pitches.reverse()
-    return render_template('category.html', category=category, pitches=pitches)
-
-@bp.route('/add-pitch', methods=['GET', 'POST'])
-def add_pitch():
+@bp.route('/add-post', methods=['GET', 'POST'])
+def add_post():
     # go to login in page if user is not logged in
     if current_user.is_anonymous:
         return redirect(url_for('auth.login'))
@@ -28,12 +19,12 @@ def add_pitch():
     form = forms.AddForm()
 
     if form.validate_on_submit():
-        pitch = Pitch(author=current_user, body=form.body.data, category=form.category.data)
-        db.session.add(pitch)
-        db.session.commit()
+        # pitch = Pitch(author=current_user, body=form.body.data, category=form.category.data)
+        # db.session.add(pitch)
+        # db.session.commit()
         return redirect(url_for('main.index'))
 
-    return render_template('add_pitch.html', form=form)
+    return render_template('add_post.html', form=form)
 
 @bp.route('/user/<user>')
 def user(user):

@@ -26,7 +26,6 @@ class Post(db.Model):
     body = db.Column(db.String(500))
     timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
-    category = db.Column(db.String(64))
     comments = db.relationship('Comment', backref='post', lazy='dynamic')
 
     def __repr__(self):
