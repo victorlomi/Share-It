@@ -130,11 +130,11 @@ nav .links a {
     font-weight: 400;
 }
 
-form {
+.add-form {
     margin-top: 185px;
 }
 
-form textarea {
+.add-form textarea {
     padding: 12px 20px;
     border-radius: 5px;
     border: 1px solid #d5d5d5;
