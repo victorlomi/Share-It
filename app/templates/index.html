@@ -10,12 +10,16 @@
     </div>
 
     <div class="posts">
-        <h1>Posts</h1>
-        {% for post in posts %}
-            <div class="post">
-                <h1>post.title</h1>
-                <h2>Author: {{ User.query.get(post.user_id) }}</h2>
-            </div>
-        {% endfor %}
+        <h1 class="section-title">Posts</h1>
+        {% if posts %}
+            {% for post in posts %}
+                <div class="post">
+                    <h1>post.title</h1>
+                    <h2>Author: {{ User.query.get(post.user_id) }}</h2>
+                </div>
+            {% endfor %}
+        {% else %}
+            <h1 class="no-posts">0 posts</h1>
+        {% endif %}
     </div>
 {% endblock %}

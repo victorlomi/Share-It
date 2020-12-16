@@ -75,16 +75,24 @@ nav .links a {
 .posts {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+
 }
 
-.posts h1 {
-    grid-column: 2;
+.posts .section-title {
+    grid-column: 2 / span 11;
     color: #222;
     font-size: 30px;
     margin-top: 50px;
-    margin-bottom: 26px;
+    margin-bottom: 18px;
     font-family: 'Viga', sans-serif;
     text-transform: capitalize;
+}
+
+.no-posts {
+    margin-top: 0;
+    grid-column: 2;
+    color: #4A4A4A;
+    font-size: 18px;
 }
 
 .call-to-action {
