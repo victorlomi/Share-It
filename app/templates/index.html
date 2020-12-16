@@ -3,10 +3,18 @@
 {% block content %}
     {# hero  #}
     <div class="hero">
+        {% if quote %}
+        <div class="hero-text">
+            <p id="quote-indicator">Quote of the day</p>
+            <h1>"{{ quote.quote }}"</h1>
+            <p id="subtitle">Check below for the latest blog posts from our wonderful community</p>
+        </div>
+        {% else %}
         <div class="hero-text">
             <h1>Get new perspectives on everything and anything</h1>
             <p>Check below for the latest blog posts from our wonderful community</p>
         </div>
+        {% endif %}
     </div>
 
     <div class="posts">

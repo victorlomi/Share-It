@@ -53,7 +53,7 @@ nav .links a {
 }
 
 .hero-text {
-    grid-column: 2 / span 5;
+    grid-column: 2 / span 8;
 }
 
 .hero-text h1 {
@@ -70,6 +70,15 @@ nav .links a {
     margin: 0;
     line-height: 1.6;
     font-size: 18px;
+}
+
+.hero-text #quote-indicator {
+    font-size: 23px;
+}
+
+
+.hero-text #subtitle {
+    font-size: 23px;
 }
 
 .posts {
@@ -120,7 +129,7 @@ nav .links a {
 
 .post h1 {
     color: #222;
-    font-size: 16px;
+    font-size: 21px;
     font-weight: 700;
     text-transform: capitalize;
 }
