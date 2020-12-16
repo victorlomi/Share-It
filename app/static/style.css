@@ -72,6 +72,21 @@ nav .links a {
     font-size: 18px;
 }
 
+.posts {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.posts h1 {
+    grid-column: 2;
+    color: #222;
+    font-size: 30px;
+    margin-top: 50px;
+    margin-bottom: 26px;
+    font-family: 'Viga', sans-serif;
+    text-transform: capitalize;
+}
+
 .call-to-action {
     display: inline-block;
     text-decoration: none;

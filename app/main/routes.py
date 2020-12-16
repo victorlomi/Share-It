@@ -7,7 +7,8 @@ from app.main import forms
 
 @bp.route('/')
 def index():
-    return render_template('index.html')
+    posts = Post.query.all()
+    return render_template('index.html', posts=posts, User=User)
 
 @bp.route('/category/<category>')
 def category(category):

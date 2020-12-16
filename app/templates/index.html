@@ -5,7 +5,17 @@
     <div class="hero">
         <div class="hero-text">
             <h1>Get new perspectives on everything and anything</h1>
-            <p>Here are the latest blog posts from our wonderful community</p>
+            <p>Check below for the latest blog posts from our wonderful community</p>
         </div>
+    </div>
+
+    <div class="posts">
+        <h1>Posts</h1>
+        {% for post in posts %}
+            <div class="post">
+                <h1>post.title</h1>
+                <h2>Author: {{ User.query.get(post.user_id) }}</h2>
+            </div>
+        {% endfor %}
     </div>
 {% endblock %}
