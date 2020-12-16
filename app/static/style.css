@@ -53,22 +53,23 @@ nav .links a {
 }
 
 .hero-text {
-    grid-column: 2 / span 4;
+    grid-column: 2 / span 5;
 }
 
 .hero-text h1 {
     color: #222;
-    font-size: 80px;
+    font-size: 48px;
     margin-top: 24px;
     margin-bottom: 26px;
     font-family: 'Viga', sans-serif;
+    text-transform: capitalize;
 }
 
 .hero-text p {
     color: #4A4A4A;
     margin: 0;
     line-height: 1.6;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .call-to-action {

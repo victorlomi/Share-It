@@ -4,11 +4,8 @@
     {# hero  #}
     <div class="hero">
         <div class="hero-text">
-            <h1>Share it</h1>
-            <p>A web app that allows you to stave away from burnout by allowing to work in a paced manner through the use of the pomodoro technique. </p>
-            {% if current_user.is_anonymous %}
-            <a class="call-to-action" href="{{ url_for('auth.login') }}">Get Started</a>
-            {% else %}
-            <a class="call-to-action" href="{{ url_for('main.settings') }}">Get Started</a>
-            {% endif %}
+            <h1>Get new perspectives on everything and anything</h1>
+            <p>Here are the latest blog posts from our wonderful community</p>
+        </div>
+    </div>
 {% endblock %}

@@ -2,12 +2,12 @@ from flask import render_template, redirect, url_for, flash
 from flask_login import current_user, login_user, logout_user
 from app.main import bp
 from app import db
-from app.models import User, Pitch, Comment
+from app.models import User, Post, Comment
 from app.main import forms
 
 @bp.route('/')
 def index():
-    return render_template('index.html') 
+    return render_template('index.html')
 
 @bp.route('/category/<category>')
 def category(category):
@@ -30,8 +30,8 @@ def add_pitch():
         pitch = Pitch(author=current_user, body=form.body.data, category=form.category.data)
         db.session.add(pitch)
         db.session.commit()
-        return redirect(url_for('main.index')) 
-    
+        return redirect(url_for('main.index'))
+
     return render_template('add_pitch.html', form=form)
 
 @bp.route('/user/<user>')
@@ -47,7 +47,7 @@ def user(user):
 @bp.route('/comments/<pitch>')
 def comments(pitch):
     comments = Comment.query.filter_by(pitch=Pitch.query.get(pitch)).all()
-   
+
     return render_template('comments.html', pitch=Pitch.query.get(pitch), comments=comments)
 
 @bp.route('/add-comment/<pitch>', methods=['GET', 'POST'])
@@ -62,6 +62,6 @@ def add_comment(pitch):
         comment = Comment(pitch=Pitch.query.get(pitch), body=form.body.data)
         db.session.add(comment)
         db.session.commit()
-        return redirect(url_for('main.comments', pitch=pitch)) 
+        return redirect(url_for('main.comments', pitch=pitch))
 
     return render_template('add_comment.html', form=form)
