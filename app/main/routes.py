@@ -50,11 +50,11 @@ def user(user):
 
 @bp.route('/comments/<post>')
 def comments(post):
-    #comments = Comment.query.filter_by(pitch=Pitch.query.get(pitch)).all()
-    return render_template('comments.html')
+    comments = Comment.query.filter_by(post=Post.query.get(post)).all()
+    return render_template('comments.html', post=Post.query.get(post), comments=comments)
 
-@bp.route('/add-comment/<pitch>', methods=['GET', 'POST'])
-def add_comment(pitch):
+@bp.route('/add-comment/<post>', methods=['GET', 'POST'])
+def add_comment(post):
     # go to login in page if user is not logged in
     if current_user.is_anonymous:
         return redirect(url_for('auth.login'))
@@ -62,9 +62,9 @@ def add_comment(pitch):
     form = forms.AddCommentForm()
 
     if form.validate_on_submit():
-        comment = Comment(pitch=Pitch.query.get(pitch), body=form.body.data)
+        comment = Comment(post=Post.query.get(post), body=form.body.data)
         db.session.add(comment)
         db.session.commit()
-        return redirect(url_for('main.comments', pitch=pitch))
+        return redirect(url_for('main.comments', post=post))
 
     return render_template('add_comment.html', form=form)

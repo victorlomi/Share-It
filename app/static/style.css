@@ -91,7 +91,7 @@ nav .links a {
     grid-column: 2 / span 11;
 }
 
-.posts .hero .add-button {
+.add-button {
     display: inline-block;
     align-self: center;
     text-decoration: none;
@@ -341,4 +341,36 @@ nav .links a {
     line-height: 1.6;
     font-size: 26px;
     color: #222;
+}
+
+.post-comments {
+    color: #222;
+    font-size: 18px; 
+}
+
+.comments-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.comments-container .title {
+    grid-column: 2 / span 11;
+}
+
+.comments-container .comments {
+    grid-column: 2 / span 4;
+}
+
+.comments-container .comments h4 {
+    margin: 10px 0;
+    font-size: 21px;
+    font-weight: 400;
+} 
+
+.comments-btn {
+    margin-top: 0;
+}
+
+.post-margin {
+    margin-top: 20px;
 }
